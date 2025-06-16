@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+#background-video {
+  position: absolute; /* Position video absolutely */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure video covers the entire screen */
+  z-index: -1; /* Send video to the back */
+}
+
+#landing-container {
+  background: rgba(255, 255, 255, 0.1); /* Transparent background */
+  padding: 3rem 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 90%;
+  max-width: 400px;
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Soft border */
+  color: #fff; /* Light text for contrast */
+  position: relative; /* Ensure container is on top */
+  z-index: 1; /* Ensure container is above video */
+}
+
+#landing-container h1 {
+  font-size: 2.2rem;
+  margin-bottom: 1.8rem;
+  color: #fff;
+}
+
+#username {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1.5px solid #ccc;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(255, 255, 255, 0.7); /* Slight transparency */
+}
+
+#username:focus {
+  outline: none;
+  border-color: #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.15);
+}
+
+button {
+  padding: 0.75rem 1.7rem;
+  font-size: 1rem;
+  background: rgba(0, 0, 0, 0.3); /* Light transparency */
+  color: white;
+  border: 1.5px solid rgba(255, 255, 255, 0.6); /* Slight border for distinction */
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(8px); /* Adds the glass effect */
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Light shadow to enhance the effect */
+}

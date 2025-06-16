@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>To-Do</title>
+  <!-- Google Font: Comfortaa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Video Container -->
+  <div id="video-container">
+    <video id="background-video" autoplay loop muted>
+      <source src="/src/bgvid.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <div class="container">
+    <div class="item header">
+      <h1>Welcome, <span id="user-name">Guest</span> !</h1> <!-- Display user's name here -->
+    </div>
+    <div class="item sidebar">
+      <div id="calendar">
+        <!-- Calendar will be displayed here -->
+        <h2></h2>
+        <div id="calendar-content">
+          <!-- You can use a library or custom code to generate the calendar -->
+        </div>
+      </div>
+      <div id="clock">
+        <!-- Clock will be displayed here -->
+        <h2>Clock: </h2>
+        <div id="clock-display">00:00:00</div>
+      </div>
+    </div>
+    <div class="item content">
+      <ul id="task-list"></ul> <!-- Task list will be displayed here -->
+    </div>
+    <div class="item footer">
+      <input type="text" class="footer-input" placeholder="Type here..." />
+      <button class="footer-submit">Submit</button>
+    </div>
+  </div>
+
+  <script src="/to-do/todo.js"></script> <!-- Link to your JavaScript file -->
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome</title>
+  
+  <!-- Google Font: Comfortaa -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="/landing/style.css" />
+</head>
+<body>
+  <video autoplay muted loop id="background-video">
+    <source src="/landing/src/bgvid.mp4" type="video/mp4" />
+  </video>
+  <div id="landing-container">
+    <h1>Welcome !!!</h1>
+    <input type="text" id="username" placeholder="Enter your name" />
+    <button onclick="saveName()">Enter</button>
+  </div>
+
+  <script>
+    function saveName() {
+      const name = document.getElementById("username").value.trim();
+      if (name) {
+        localStorage.setItem("userName", name);
+        window.location.href = "../to-do/todo.html";
+      }
+    }
+  </script>
+</body>
+</html>
